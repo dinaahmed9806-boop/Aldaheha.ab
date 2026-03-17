@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جدول عبد الخالق - الإصدار الأسطوري النهائي الملكي 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-dark: #000103;
+    --card-bg: #030810;
+    --gold: #ffd700;
+    --gold-glow: #ffea00; /* لمعان ذهبي أشد */
+    --cyan-glow: #00ffff; /* لمعان مائي أشد */
+    --text-color: #f1f5f9;
+}
+
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-color);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* 1. الأشكال الذهبية الشفافة (هندسية، كيميائية، كتب، أقلام) فوق المحتوى */
+#shapes-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 9999;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.bg-shape {
+    position: absolute;
+    fill: none;
+    stroke: var(--gold);
+    stroke-width: 1;
+    opacity: 0.15;
+    filter: drop-shadow(0 0 5px var(--gold-glow));
+    animation: float-around linear infinite;
+}
+
+@keyframes float-around {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(120px, 180px) rotate(180deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+/* 2. الهيدر مع لمعان أسطوري وشعاع زجاجي */
+header {
+    text-align: center;
+    padding: 130px 20px;
+    background: radial-gradient(circle at center, #0a1221 0%, #000 100%);
+    position: relative;
+    overflow: hidden;
+    border-bottom: 4px solid var(--gold);
+}
+
+/* الشعاع الزجاجي الحاد */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        105deg,
+        transparent 20%,
+        rgba(0, 255, 255, 0.2) 45%,
+        rgba(255, 255, 255, 0.8) 50%, 
+        rgba(0, 255, 255, 0.2) 55%,
+        transparent 80%
+    );
+    transform: skewX(-30deg);
+    animation: wide-sweep 5s infinite ease-in-out;
+    z-index: 1;
+}
+
+@keyframes wide-sweep {
+    0% { left: -150%; }
+    100% { left: 150%; }
+}
+
+header h1 {
+    color: var(--gold);
+    font-size: clamp(3.8rem, 13vw, 7rem);
+    margin: 0;
+    font-weight: 900;
+    text-shadow: 0 0 35px var(--gold-glow), 0 0 60px var(--gold); /* لمعان أشد */
+    z-index: 10;
+    position: relative;
+}
+
+.channel-title-container {
+    margin-top: 20px;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.channel-name {
+    font-size: 2.8rem;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 0 20px var(--cyan-glow);
+}
+
+.plan-subtitle {
+    font-size: 1.5rem;
+    color: var(--gold);
+    font-weight: 600;
+    text-shadow: 0 0 10px var(--gold-glow);
+    background: rgba(255, 215, 0, 0.1);
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--gold);
+}
+
+/* 3. شريط التحميل الزجاجي مع تدرج الألوان */
+.progress-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 1, 3, 0.95);
+    padding: 25px 0;
+    border-bottom: 2px solid var(--gold);
+    backdrop-filter: blur(20px);
+}
+
+.progress-bar-bg {
+    width: 85%;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 215, 0, 0.6);
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #ffea00, #00ffff, #ffea00); /* تدرج الألوان */
+    background-size: 200% 100%;
+    animation: shine-progress 2s infinite linear;
+    box-shadow: 0 0 25px var(--cyan-glow);
+    transition: width 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes shine-progress {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.progress-text {
+    text-align: center;
+    margin-top: 12px;
+    font-weight: 900;
+    color: #00ffff;
+    font-size: 1.6rem;
+    text-shadow: 0 0 15px var(--cyan-glow);
+}
+
+/* 4. رسالة التهنئة والمفرقعات مع تدرج */
+#congrats-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(10,18,33,1) 0%, rgba(0,0,0,1) 100%);
+    z-index: 10000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#fireworks-canvas {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 10001;
+}
+
+.congrats-card {
+    border: 5px solid var(--gold);
+    padding: 70px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(0, 255, 255, 0.05)); /* تدرج في الكارت */
+    box-shadow: 0 0 100px var(--gold-glow);
+    transform: scale(0.8);
+    animation: popIn 0.8s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 10002;
+    position: relative;
+    backdrop-filter: blur(15px);
+}
+
+@keyframes popIn {
+    to { transform: scale(1); }
+}
+
+/* 5. الجدول اللامع وتدرج الألوان للدروس */
+.container { max-width: 900px; margin: 60px auto; padding: 20px; }
+
+.day-card { 
+    background: var(--card-bg); 
+    border: 1px solid rgba(255,215,0,0.15); 
+    border-radius: 20px; 
+    margin-bottom: 30px; 
+    transition: 0.4s; 
+    overflow: hidden;
+}
+
+.day-card.active { 
+    border-color: var(--gold); 
+    box-shadow: 0 0 30px var(--gold-glow), 0 0 15px rgba(255,255,255,0.1) inset; /* لمعان للأيام */
+}
+
+.day-header { padding: 30px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+
+.day-num { 
+    background: var(--gold); 
+    color: #000; 
+    width: 55px; height: 55px; 
+    border-radius: 12px; 
+    display: flex; align-items: center; justify-content: center; 
+    font-weight: 900; font-size: 1.5rem; 
+    box-shadow: 0 0 15px var(--gold-glow);
+}
+
+.subject-item { 
+    padding: 25px 40px; 
+    border-top: 1px solid rgba(255,215,0,0.1); 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+/* تدرج الألوان للدروس اللامعة */
+.subject-title {
+    font-weight: 900; 
+    font-size: 1.4rem; 
+    background: linear-gradient(90deg, #ffea00, #fff); /* تدرج لوني */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px var(--gold-glow);
+}
+
+.done-btn { 
+    background: none; 
+    border: 2px solid var(--gold); 
+    color: var(--gold); 
+    padding: 12px 25px; 
+    border-radius: 12px; 
+    cursor: pointer; 
+    font-family: 'Cairo'; 
+    font-weight: 900; 
+    font-size: 1.1rem; 
+    transition: 0.3s; 
+    text-shadow: 0 0 10px var(--gold-glow);
+}
+
+.done-btn.completed { 
+    background: var(--gold); 
+    color: #000; 
+    box-shadow: 0 0 20px var(--gold-glow); 
+}
+
+</style>
+</head>
+<body>
+
+<div id="shapes-container"></div>
+
+<div id="congrats-overlay">
+    <canvas id="fireworks-canvas"></canvas>
+    <div class="congrats-card">
+        <h2 style="font-size: 5rem; color: var(--gold); margin: 0; text-shadow: 0 0 40px var(--gold-glow);">🏆 أسطورة الـ 25 يوماً 🏆</h2>
+        <p style="font-size: 2.5rem; margin: 30px 0; color: #fff; text-shadow: 0 0 15px var(--cyan-glow);">لقد أتممت منهج أولى ثانوي بالكامل بنجاح</p>
+        <div style="font-size: 3rem; font-weight: 900; color: var(--gold); text-shadow: 0 0 20px var(--gold-glow);">قناة الدحيحة فخورة بك 🔥</div>
+        <button onclick="location.reload()" style="margin-top: 60px; padding: 18px 60px; background: var(--gold); border: none; border-radius: 15px; cursor: pointer; font-family: 'Cairo'; font-weight: 900; font-size: 1.5rem; box-shadow: 0 0 30px var(--gold);">ابدأ رحلة جديدة</button>
+    </div>
+</div>
+
+<header>
+    <h1>ABDELKHALIQ</h1>
+    <div class="channel-title-container">
+        <span class="channel-name">قناة الدحيحة</span>
+        <span class="plan-subtitle">جدول الـ 25 يوماً كاملاً - الترم الثاني 2026</span>
+    </div>
+</header>
+
+<div class="progress-container">
+    <div class="progress-bar-bg">
+        <div class="progress-fill" id="p-fill"></div>
+    </div>
+    <div class="progress-text">معدل الإنجاز الملكي: <span id="p-text">0</span>%</div>
+</div>
+
+<div class="container" id="grid"></div>
+
+<script>
+// مكتبة الأشكال الذهبية الشفافة اللامعة (SVG)
+const shapesContainer = document.getElementById('shapes-container');
+const svgPaths = [
+    // مكعب هندسي
+    '<path d="M12 2l10 5v10l-10 5-10-5V7l10-5z M12 22V12 M22 7l-10 5 M2 7l10 5"/>',
+    // ذرة كيميائية
+    '<circle cx="12" cy="12" r="3"/><path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z M22 12h-3 M5 12H2 M12 2v3 M12 19v3"/>',
+    // حلقة بنزين
+    '<path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z M12 5.5v13"/>',
+    // مثلثات متداخلة
+    '<path d="M12 2l10 18H2L12 2z M12 6l6 11H6L12 6z"/>',
+    // كتاب مفرغ
+    '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/> <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/> <path d="M6.5 17H20"/>',
+    // قلم رصاص مفرغ
+    '<path d="M3 21v-4.75L15.92 3.32a1 1 0 0 1 1.41 0l3.35 3.35a1 1 0 0 1 0 1.41L7.75 21H3z M17.33 4.73l2 2 M6.34 16.73h.01"/>'
+];
+
+for (let i = 0; i < 70; i++) { // زيادة عدد الأشكال لـ 70
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("width", (Math.random() * 30 + 35).toString()); // أحجام مختلفة
+    svg.setAttribute("height", svg.getAttribute("width"));
+    svg.classList.add("bg-shape");
+    svg.innerHTML = svgPaths[Math.floor(Math.random() * svgPaths.length)];
+    svg.style.left = Math.random() * 100 + 'vw';
+    svg.style.top = Math.random() * 100 + 'vh';
+    svg.style.animationDuration = (Math.random() * 15 + 20) + 's'; // حركات أبطأ
+    shapesContainer.appendChild(svg);
+}
+
+// المنهج المحدث والكامل (25 يوم بأسمائه الكاملة)
+const schedule = [
+    { d: 1, s: [ {t: "التاريخ", d: "حضارة بلاد العراق القديم (الرافدين)"}, {t: "اللغة العربية", d: "النحو: أسلوب الاستثناء"} ] },
+    { d: 2, s: [ {t: "الرياضيات", d: "الجبر: تنظيم البيانات والمصفوفات"}, {t: "العلوم المتكاملة", d: "الغلاف الحيويواستدامة موارد كوكب الأرض"} ] },
+    { d: 3, s: [ {t: "إنجليزي", d: "Unit 7 Vocabulary"}, {t: "التاريخ", d: "حضارة فينيقيا"} ] },
+    { d: 4, s: [ {t: "اللغة العربية", d: "تثنية المقصور وجمعه"}, {t: "البلاغة", d: "الكناية وتطبيقاتها"} ] },
+    { d: 5, s: [ {t: "الرياضيات", d: "المتطابقات المثلثية وحل المعادلات"}, {t: "إنجليزي", d: "Unit 8 Vocabulary"} ] },
+    { d: 6, s: [ {t: "العلوم المتكاملة", d: "العمليات الحيوية داخل الكائنات"}, {t: "الأدب", d: "الأدب في العصر العباسي (1)"} ] },
+    { d: 7, s: [ {t: "اللغة العربية", d: "تثنية المنقوص وجمعه"}, {t: "إنجليزي", d: "Unit 8 Grammar"} ] },
+    { d: 8, s: [ {t: "الرياضيات", d: "المتجهات والعمليات عليها"}, {t: "التاريخ", d: "الحضارة اليونانية (الإغريقية)"} ] },
+    { d: 9, s: [ {t: "البلاغة", d: "المجاز المرسل وتطبيقاته"}, {t: "اللغة العربية", d: "تثنية الممدود وجمعه"} ] },
+    { d: 10, s: [ {t: "الرياضيات", d: "المحددات وحل أنظمة المعادلات"}, {t: "إنجليزي", d: "Unit 9 Vocabulary"} ] },
+    { d: 11, s: [ {t: "العلوم المتكاملة", d: "الاتزان الداخلي للغلاف الجوي"}, {t: "إنجليزي", d: "Unit 9 Grammar"} ] },
+    { d: 12, s: [ {t: "اللغة العربية", d: "مراجعة نهضة الشعر"}, {t: "الرياضيات", d: "حل المثلث القائم"} ] },
+    { d: 13, s: [ {t: "التاريخ", d: "الحضارة الرومانية"}, {t: "الرياضيات", d: "الجبر: ضرب المصفوفات"} ] },
+    { d: 14, s: [ {t: "العلوم المتكاملة", d: "الإحساس والاستجابة في الكائنات الحية"}, {t: "اللغة العربية", d: "النحو: مراجعة شاملة للترم الثاني"} ] },
+    { d: 15, s: [ {t: "إنجليزي", d: "Unit 10 Vocabulary"}, {t: "الرياضيات", d: "المعكوس الضربي للمصفوفة"} ] },
+    { d: 16, s: [ {t: "العلوم المتكاملة", d: "تطبيقات النانو تكنولوجي"}, {t: "الرياضيات", d: "الجبر: المتباينات الخطية"} ] },
+    { d: 17, s: [ {t: "إنجليزي", d: "Unit 11 Vocabulary"}, {t: "الهندسة", d: "العمليات على المتجهات (2)"} ] },
+    { d: 18, s: [ {t: "العلوم المتكاملة", d: "الغلاف الصخري واستقرار كوكب الأرض"}, {t: "مثلثات", d: "الحل العام للمعدلات المثلثية"} ] },
+    { d: 19, s: [ {t: "التاريخ", d: "تواصل مصر مع اليونان والرومان"}, {t: "الهندسة", d: "تقسيم قطعة مستقيمة"} ] },
+    { d: 20, s: [ {t: "إنجليزي", d: "Unit 12 Vocabulary"}, {t: "مثلثات", d: "زوايا الارتفاع والانخفاض"} ] },
+    { d: 21, s: [ {t: "العلوم المتكاملة", d: "استدامة موارد الطاقة"}, {t: "الهندسة", d: "معادلة الخط المستقيم"} ] },
+    { d: 22, s: [ {t: "مثلثات", d: "مساحة القطاع والقطعة الدائرية"}, {t: "الهندسة", d: "طول العمود من نقطة لخط"} ] },
+    { d: 23, s: [ {t: "مراجعة شاملة (1)", d: "اللغة العربية + إنجليزي (حل نماذج شاملة)"} ] },
+    { d: 24, s: [ {t: "مراجعة شاملة (2)", d: "التاريخ + العلوم المتكاملة (نماذج الوزارة)"} ] },
+    { d: 25, s: [ {t: "اليوم الذهبي", d: "الرياضيات + نموذج الوزارة الاسترشادي النهائي"} ] }
+];
+
+let totalLessons = 0;
+let completedLessons = 0;
+const grid = document.getElementById('grid');
+
+schedule.forEach(item => {
+    totalLessons += item.s.length;
+    const card = document.createElement('div');
+    card.className = 'day-card';
+    card.innerHTML = `
+        <div class="day-header" onclick="this.parentElement.classList.toggle('active'); let c=this.nextElementSibling; c.style.display=c.style.display==='none'?'block':'none';">
+            <div style="display:flex; align-items:center; gap:20px;">
+                <span class="day-num">${item.d}</span>
+                <span style="font-weight:700; font-size:1.6rem; text-shadow: 0 0 10px var(--gold-glow);">اليوم ${item.d}</span>
+            </div>
+            <span style="color:var(--gold); font-size:1.4rem">▼</span>
+        </div>
+        <div class="content" style="display:none">
+            ${item.s.map(sub => `
+                <div class="subject-item">
+                    <div>
+                        <div class="subject-title">${sub.t}</div>
+                        <div style="font-size:1.1rem; opacity:0.9; margin-top:8px;">${sub.d}</div>
+                    </div>
+                    <button class="done-btn" onclick="toggleDone(this)">إنجاز</button>
+                </div>`).join('')}
+        </div>
+    `;
+    grid.appendChild(card);
+});
+
+function toggleDone(btn) {
+    btn.classList.toggle('completed');
+    if (btn.classList.contains('completed')) {
+        btn.innerText = '✓ تم';
+        completedLessons++;
+    } else {
+        btn.innerText = 'إنجاز';
+        completedLessons--;
+    }
+    const percent = Math.round((completedLessons / totalLessons) * 100);
+    document.getElementById('p-fill').style.width = percent + '%';
+    document.getElementById('p-text').innerText = percent;
+
+    if (percent === 100) {
+        document.getElementById('congrats-overlay').style.display = 'flex';
+        initFireworks();
+    }
+}
+
+// نظام الألعاب النارية الاحترافي (Canvas) الملون واللامع
+const canvas = document.getElementById('fireworks-canvas');
+const ctx = canvas.getContext('2d');
+let particles = [];
+
+function initFireworks() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    loop();
+}
+
+function Particle(x, y, color) {
+    this.x = x; this.y = y; this.color = color;
+    this.radius = Math.random() * 4 + 1;
+    this.velocity = { x: Math.random() * 8 - 4, y: Math.random() * 8 - 4 };
+    this.life = 120;
+}
+
+Particle.prototype.draw = function() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+    ctx.fillStyle = this.color;
+    ctx.fill();
+    ctx.shadowBlur = 10;
+    ctx.shadowColor = this.color;
+};
+
+Particle.prototype.update = function() {
+    this.x += this.velocity.x; this.y += this.velocity.y;
+    this.life -= 3; this.radius *= 0.98;
+};
+
+function loop() {
+    if (document.getElementById('congrats-overlay').style.display !== 'flex') return;
+    requestAnimationFrame(loop);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    if (Math.random() < 0.1) { // إنشاء انفجار جديد
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height * 0.7;
+        const color = `hsl(${Math.random() * 360}, 100%, 70%)`;
+        for (let i = 0; i < 70; i++) particles.push(new Particle(x, y, color));
+    }
+
+    particles.forEach((p, i) => {
+        p.update(); p.draw();
+        if (p.life <= 0) particles.splice(i, 1);
+    });
+}
+</script>
+</body>
+</html>
